@@ -181,6 +181,20 @@ body {
     margin: 0;
 }
 
+.footer-link {
+    /* display: inline-flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* width: 60px; */
+    /* height: 60px; */
+    /* background: #25D366; */
+    /* border-radius: 50%; */
+    /* transition: all 0.3s ease; */
+    /* box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); */
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .content-card {

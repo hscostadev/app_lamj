@@ -6,18 +6,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'img/favicon_const.png' %}" type="image/x-icon">
     <title>Lar do Amparo Menino Jesus - Em Construção</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_const.css' %}">
 </head>
 
-<body style="background-image: url({% static "img/back_constr.png" %}); " >
+<body style="background-image: url({% static "img/back_const.png" %}); " >
     <div class="background-overlay"></div>
     
     <main class="container">
         <div class="content-card">
             <div class="logo-container">
-                <img src="{% static 'img/logo.png' %}" alt="Lar do Amparo Menino Jesus Logo" class="logo">
+                <img src="{% static 'img/logo_const.png' %}" alt="Lar do Amparo Menino Jesus Logo" class="logo">
             </div>
             <p class="message"><strong> Estamos em construção, nos preparando para estarmos à disposição de todos.</strong></p>
             
@@ -33,10 +33,14 @@
 
     <footer class="footer">
         <hr class="footer-divider">
-        <p class="footer-text">Feito com muito 🩷 e dedicação.</p>
+        <p class="footer-text">Feito com muito 🩷 e dedicação por 
+            <a href="https://wa.me/5586988922499" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Contato via WhatsApp">
+                HSWebTech 🇧🇷
+            </a>
+        </p>
     </footer>
 
-    <script type="module" src="{% static 'js/script.js' %}"></script>
+    <script type="module" src="{% static 'js/script_const.js' %}"></script>
 </body>
 
 </html>
