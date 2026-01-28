@@ -1,6 +1,6 @@
 services:
   nginx-proxy:
-    container_name: namex-proxy
+    container_name: nginx-proxy
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
     ports:
