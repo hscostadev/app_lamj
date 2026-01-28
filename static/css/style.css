@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    /* background-image: url({% static 'img/back_constr.png' %}); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.content-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 54px 45px;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    max-width: 540px;
+    width: 100%;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-container {
+    margin-bottom: 40px;
+}
+
+.logo {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.message {
+    font-size: 18px;
+    font-weight: 400;
+    color: #2C3E50;
+    line-height: 1.6;
+    margin: 0 0 30px 0;
+}
+
+.whatsapp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.whatsapp-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    text-decoration: none;
+}
+
+.whatsapp-link:hover {
+    background: #20BA5A;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-link:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+.whatsapp-icon {
+    width: 32px;
+    height: 32px;
+    color: #FFFFFF;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    z-index: 3;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    margin: 0 auto 15px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.footer-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-card {
+        padding: 36px 27px;
+        border-radius: 20px;
+        max-width: 486px;
+    }
+
+    .logo {
+        max-width: 330px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
+    .whatsapp-link {
+        width: 55px;
+        height: 55px;
+    }
+
+    .whatsapp-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .footer-text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-card {
+        padding: 27px 18px;
+        border-radius: 16px;
+        max-width: 432px;
+    }
+
+    .logo {
+        max-width: 280px;
+    }
+
+    .message {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    .whatsapp-container {
+        margin-top: 25px;
+    }
+
+    .whatsapp-link {
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .footer-divider {
+        width: 90%;
+    }
+
+    .footer-text {
+        font-size: 12px;
+    }
+}
